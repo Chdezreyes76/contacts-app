@@ -1,0 +1,52 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.env
+.env.*
+
+# SQLite database
+*.db
+*.sqlite3
+
+# Alembic
+alembic/versions/*.pyc
+alembic/versions/*.pyo
+
+# VSCode
+.vscode/
+
+# Docker
+*.tar
+*.img
+*.container
+
+# Test outputs
+.pytest_cache/
+htmlcov/
+coverage.xml
+.coverage
+.mypy_cache/
+.tox/
+dist/
+build/
+site/
+
+# Logs
+*.log
+
+# Sistema
+desktop.ini
+Thumbs.db
+.DS_Store
+
+#Instrucciones
+instrucciones/
