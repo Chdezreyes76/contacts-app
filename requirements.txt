@@ -1,0 +1,13 @@
+fastapi             # FastAPI framework for building APIs
+uvicorn             # ASGI server for serving FastAPI applications
+jinja2              # Templating engine for rendering HTML
+sqlalchemy          # SQL toolkit and ORM for database interactions
+pydantic            # Data validation and settings management
+aiosqlite           # Async SQLite driver
+pytest              # Testing framework
+alembic             # Database migration tool
+pydantic[email]     # Pydantic email validation
+python-multipart    # Support for multipart/form-data
+httpx              # HTTP client for testing (requerido por TestClient)
+pytest-cov         # Coverage plugin for pytest
+pytest-html        # HTML reports for pytest

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if contact %}Editar{% else %}Crear{% endif %} Contacto</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{% if contact %}Editar{% else %}Crear{% endif %} Contacto</h1>
+        
+        {% if error %}
+        <div class="error">
+            {{ error }}
+        </div>
+        {% endif %}
+        
+        <form method="post" action="{{ action }}">
+            <label>Nombre:
+                <input type="text" name="name" value="{{ name if name else (contact.name if contact else '') }}" required>
+            </label>
+            <label>Email:
+                <input type="email" name="email" value="{{ email if email else (contact.email if contact else '') }}" required>
+            </label>
+            <label>Teléfono:
+                <input type="text" name="phone" value="{{ phone if phone else (contact.phone if contact else '') }}" required>
+            </label>
+            <button type="submit">Guardar</button>
+            <a href="/">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>

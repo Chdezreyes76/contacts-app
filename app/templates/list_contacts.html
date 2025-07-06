@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agenda de Contactos</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contactos</h1>
+        <a href="/new">Añadir contacto</a>
+        <ul>
+        {% for contact in contacts %}
+            <li>
+                <span>{{ contact.name }} - {{ contact.email }} - {{ contact.phone }}</span>
+                <span>
+                    <a href="/edit/{{ contact.id }}">Editar</a>
+                    <a href="/delete/{{ contact.id }}">Eliminar</a>
+                </span>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

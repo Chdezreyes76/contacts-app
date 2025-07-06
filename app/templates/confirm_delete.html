@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmar borrado</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¿Eliminar contacto?</h1>
+        <p>¿Estás seguro de que deseas eliminar a {{ contact.name }} ({{ contact.email }})?</p>
+        <form method="post" action="/delete/{{ contact.id }}">
+            <button type="submit">Sí, eliminar</button>
+            <a href="/">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>
