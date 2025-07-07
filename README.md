@@ -7,7 +7,7 @@ Esta agenda permite crear, listar, editar y eliminar contactos. Incluye una inte
 
 ## Requisitos
 - Python 3.11+
-- Docker (opcional, para contenerización)
+- Docker (ver Dockerfile en https://github.com/Chdezreyes76/contacts-app/blob/master/Dockerfile)
 - Docker Compose (opcional, para despliegue rápido)
 
 ## Instalación y ejecución local
@@ -65,6 +65,9 @@ El pipeline de GitHub Actions realiza:
 - Build de la imagen Docker
 - Push automático a Docker Hub
 
+En este archivo esta el pipeline de CI/CD: https://github.com/Chdezreyes76/contacts-app/blob/master/.github/workflows/ci.yml
+Y las ejecuciones del pipeline se pueden ver en la pestaña "Actions" del repositorio: https://github.com/Chdezreyes76/contacts-app/actions
+
 ## Enlace a Docker Hub
 [[https://hub.docker.com/r/chdezreyes76/agenda-fastapi](https://hub.docker.com/r/chdezreyes76/agenda-fastapi)]
 
@@ -72,4 +75,3 @@ El pipeline de GitHub Actions realiza:
 
 ---
 
-¿Dudas o sugerencias? Abre un issue en el repositorio.
