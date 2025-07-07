@@ -10,9 +10,11 @@ jobs:
   build-test-push:
     runs-on: ubuntu-latest
     steps:
+      # --- FASE: Checkout del código ---
       - name: Checkout código
         uses: actions/checkout@v4
 
+      # --- FASE: Construcción (instalación de dependencias) ---
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
@@ -23,9 +25,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # --- FASE: Pruebas ---
       - name: Ejecutar pruebas
         run: pytest
 
+      # --- FASE: Despliegue (build y push Docker) ---
       - name: Login en Docker Hub
         uses: docker/login-action@v3
         with:
